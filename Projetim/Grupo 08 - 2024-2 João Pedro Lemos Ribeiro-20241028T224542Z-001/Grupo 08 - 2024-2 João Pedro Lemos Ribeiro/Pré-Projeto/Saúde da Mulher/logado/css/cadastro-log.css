@@ -1,0 +1,143 @@
+/*Fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*Reset em config do site*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*Configurações gerais bg*/
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #FECEE1;
+  color: black;
+  background-image: url("../img-log/pinkbg-log.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*Configurações do botão canto esquerdo superior*/
+.btn-container {
+  position: fixed;
+  top: 10px;
+  left: -5px;
+}
+
+/*Conteúdo dentro do botão*/
+.btn-top {
+  z-index: 9999;
+  position: absolute;
+  top: 10px;
+  left: -100px;
+  /* Posição inicial à esquerda */
+  padding: 10px 20px;
+  background-color: white;
+  color: #fd5198;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  font-family: "Rubik", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Transição suave para a mudança de cor */
+  animation: slideInFromLeft 1.0s forwards;
+  /* Inicia a animação */
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    left: -100px;
+    /* Começa fora da tela à esquerda */
+  }
+
+  100% {
+    left: 0px;
+    /* Termina na posição */
+  }
+}
+
+/*Ação após passar o mouse*/
+.btn-top:hover {
+  background-color: #fd5198;
+  color: white;
+}
+
+/*Edita o corpo do formulário*/
+.container {
+  margin-right: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 600px;
+}
+
+/*h2 dos forms*/
+.container h2 {
+  margin-bottom: 10px;
+}
+
+/*Orienta os forms*/
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.grupo-input {
+  flex-basis: calc(50% - 10px);
+  /* Cada bloco ocupa cerca de 50% da largura do container, com espaçamento entre eles */
+}
+
+.rotulo {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Rubik", sans-serif;
+}
+
+/*Edita o botão "Enviar"*/
+.botao {
+  font-family: "Rubik", sans-serif;
+  background-color: #fd5198;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #ff38f8;
+  transition: background-color 0.3s ease;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index-log.css" type="text/css">
+  <link rel="shortcut icon" href="img-log/logo2.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Saúde da Mulher</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <img class="logo-menu" src="img-log/logo2.png" alt="Logo">
+    <nav class="cabe-menu">
+      <a class="cabe-menu-item" href="sobre-log.html">Sobre</a>
+      <a class="cabe-menu-item" href="servicos-log.html">Serviços</a>
+      <a class="cabe-menu-item" href="artigos-log.html">Artigos</a>
+      <a class="cabe-menu-item" href="noticias-log.html">Notícias</a>
+      <a class="cabe-menu-item" href="contato-log.html">Contato</a>
+    </nav>
+    <div class="dropdown">
+      <img src="img-log/female-log.png" alt="Foto perfil" width="45" height="auto"
+        class="rounded-circle dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="exames-log.html">Exames</a>
+        <a class="dropdown-item" href="consultas-log.html">Consultas</a>
+        <a class="dropdown-item" href="login-log.html">Alterar usuário</a>
+        <a class="dropdown-item hidden" href="../index.html" onclick="logout()">Logout</a>
+      </div>
+    </div>
+    <button id="toggleDarkMode" class="dark-mode-btn">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+  <!-- Botões de acessibilidade -->
+  <div class="font-size-controls">
+    <button id="increaseFontSize">Aa+</button>
+    <button id="decreaseFontSize">Aa-</button>
+  </div>
+  <main class="conteudo">
+    <section class="conte-principal1">
+      <h3>
+        Conhecimento e cuidado para todas as <br />
+        mulheres: Seu bem-estar em primeiro lugar.
+      </h3>
+    </section>
+
+    <!-- Seção de notícias -->
+    <section class="texto-informativo">
+      <h2><a href="noticias-log.html">Notícias Recentes</a></h2>
+
+      <article>
+        <h3>Novos Avanços na Saúde Feminina</h3>
+        <p>
+          Recentemente, a comunidade médica fez grandes avanços no tratamento de condições de saúde feminina,
+          incluindo novas terapias para endometriose e tratamentos mais eficazes para o câncer de mama.
+          Esses avanços prometem melhorar significativamente a qualidade de vida das mulheres em todo o mundo.
+        </p>
+      </article>
+
+      <article>
+        <h3>Estudos Revelam Importância do Cuidado Preventivo</h3>
+        <p>
+          Um estudo recente destacou a importância dos cuidados preventivos na saúde feminina. Segundo os
+          pesquisadores, exames regulares como mamografias e Papanicolau são cruciais para a detecção precoce
+          de doenças, aumentando as chances de tratamento bem-sucedido.
+        </p>
+      </article>
+    </section>
+
+    <!-- Seção de artigos -->
+    <section class="texto-informativo">
+      <h2><a href="artigos-log.html">Artigos Informativos</a></h2>
+
+      <article>
+        <h3>A Importância da Alimentação Saudável</h3>
+        <p>
+          A alimentação saudável desempenha um papel fundamental na manutenção da saúde feminina. Nutricionistas
+          recomendam uma dieta equilibrada rica em frutas, vegetais, proteínas magras e grãos integrais para
+          promover o bem-estar geral e prevenir doenças crônicas.
+        </p>
+      </article>
+
+      <article>
+        <h3>Exercícios Físicos e Bem-Estar</h3>
+        <p>
+          A prática regular de exercícios físicos é essencial para a saúde das mulheres. Além de ajudar na
+          manutenção do peso ideal, o exercício físico regular melhora a saúde cardiovascular, fortalece os
+          ossos e músculos, e contribui para a saúde mental.
+        </p>
+      </article>
+    </section>
+
+    <!-- Seção de dicas de saúde -->
+    <section class="texto-informativo">
+      <h2>Dicas de Saúde</h2>
+
+      <ul>
+        <li>
+          <strong>Realize exames regulares:</strong> Consultas regulares com seu ginecologista são essenciais para
+          monitorar sua saúde e detectar precocemente qualquer problema.
+        </li>
+        <li>
+          <strong>Mantenha uma dieta equilibrada:</strong> Inclua uma variedade de alimentos nutritivos em sua dieta
+          para garantir que seu corpo receba todos os nutrientes necessários.
+        </li>
+        <li>
+          <strong>Exercite-se regularmente:</strong> A atividade física regular é crucial para manter um peso saudável
+          e prevenir doenças.
+        </li>
+        <li>
+          <strong>Durma bem:</strong> O sono de qualidade é vital para a saúde geral. Tente dormir pelo menos 7-8 horas
+          por noite.
+        </li>
+        <li>
+          <strong>Gerencie o estresse:</strong> Práticas como meditação, yoga e hobbies podem ajudar a reduzir o
+          estresse e melhorar sua saúde mental.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="botao-flutu">
+    <a href="https://web.whatsapp.com/send?phone=5521983773538">
+      <img src="img-log/zap.png" alt="WhatsApp" style="width: 75px; height: 75px;">
+    </a>
+  </div>
+
+  <footer class="rodape">
+    <div class="rodainfo">
+      <a href="index-log.html">
+        <p>&copy; 2024 Saúde da Mulher</p>
+      </a>
+      <nav class="nav-links">
+        <a href="sobre-log.html">Sobre</a>
+        <a href="polipriv-log.html">Política de Privacidade</a>
+        <a href="contato-log.html">Contato</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const toggleButton = document.getElementById('toggleDarkMode');
+      const icon = toggleButton.querySelector('i');
+
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        } else {
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
+        }
+      });
+    });
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const toggleButton = document.getElementById('toggleDarkMode');
+      const icon = toggleButton.querySelector('i');
+      const increaseFontSizeBtn = document.getElementById('increaseFontSize');
+      const decreaseFontSizeBtn = document.getElementById('decreaseFontSize');
+      let currentFontSize = 16; // Tamanho de fonte padrão
+
+      // Função para alterar o tamanho da fonte
+      const changeFontSize = (delta) => {
+        currentFontSize += delta;
+        document.body.style.fontSize = currentFontSize + 'px';
+      };
+
+      increaseFontSizeBtn.addEventListener('click', () => changeFontSize(2));
+      decreaseFontSizeBtn.addEventListener('click', () => changeFontSize(-2));
+    });
+    function logout() {
+      const modal = document.getElementById('myModal');
+      const confirmButton = document.getElementById('confirmLogout');
+      const closeButton = document.getElementsByClassName('close')[0];
+      const cancelButton = document.getElementsByClassName('close-modal')[0];
+
+      // Mostrar o modal
+      modal.style.display = 'block';
+
+      // Ação do botão de confirmação
+      confirmButton.onclick = function () {
+        localStorage.removeItem('userLoggedIn');
+        updateAuthStatus();
+        window.location.href = 'login.html';
+      }
+
+      // Fechar o modal se clicar no "X" ou em cancelar
+      closeButton.onclick = function () {
+        modal.style.display = 'none';
+      }
+
+      cancelButton.onclick = function () {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login-log.css">
+    <link rel="shortcut icon" href="img/logo2-log.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="Cabecalho"></header>
+    <button class="btn-top" onclick="window.location.href='index-log.html'">Início</button>
+    <div id="loginForm" class="main-login">
+        <div class="left-login">
+            <h1>Faça o login para explorar todos os recursos exclusivos que temos a oferecer.</h1>
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Login</h1>
+                <form id="loginForm" onsubmit="return handleLogin(event)">
+                    <div class="textfield">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required maxlength="45"
+                            placeholder="seuemailaqui@email.com">
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Senha" required maxlength="10">
+                    </div>
+                    <div class="textfield">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="Ex: 123.456.789-00" required maxlength="14"
+                            oninput="mascara(this)">
+                    </div>
+                    <p class="registro">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+                    <p class="registro"><a href="#"
+                            onclick="document.getElementById('forgotPasswordModal').style.display='block'">Esqueci minha
+                            senha</a></p>
+                    <button type="submit" class="btn-login">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Recuperação de Senha -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close"
+                onclick="document.getElementById('forgotPasswordModal').style.display='none'">&times;</span>
+            <h2>Recuperar Senha</h2>
+            <form id="forgotPasswordForm" onsubmit="return handleForgotPassword(event)">
+                <div class="textfield">
+                    <label for="emailRecovery">Informe seu e-mail:</label>
+                    <input type="email" id="emailRecovery" name="emailRecovery" required maxlength="45"
+                        placeholder="seuemailaqui@email.com">
+                </div>
+                <button type="submit" class="btn-login-modal">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            const cpf = document.getElementById('cpf').value;
+
+            if (!validarCPF(cpf)) {
+                alert('CPF inválido!');
+                return false;
+            }
+
+            alert('Login bem-sucedido!');
+            localStorage.setItem('userLoggedIn', true);
+            window.location.href = 'logado/index-log.html';
+        }
+
+        function handleForgotPassword(event) {
+            event.preventDefault();
+            const emailRecovery = document.getElementById('emailRecovery').value;
+
+            if (!validarEmail(emailRecovery)) {
+                alert('E-mail inválido!');
+                return false;
+            }
+
+            alert('Solicitação de recuperação de senha enviada!');
+            document.getElementById('forgotPasswordModal').style.display = 'none';
+        }
+
+        function mascara(i) {
+            var v = i.value;
+
+            if (isNaN(v[v.length - 1])) {
+                i.value = v.substring(0, v.length - 1);
+                return;
+            }
+
+            i.setAttribute("maxlength", "14");
+            if (v.length == 3 || v.length == 7) i.value += ".";
+            if (v.length == 11) i.value += "-";
+        }
+
+        function validarCPF(cpf) {
+            cpf = cpf.replace(/[^\d]+/g, '');
+
+            if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+                return false;
+            }
+
+            let soma = 0;
+            let resto;
+
+            for (let i = 1; i <= 9; i++) {
+                soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+            }
+
+            resto = (soma * 10) % 11;
+
+            if ((resto == 10) || (resto == 11)) resto = 0;
+            if (resto != parseInt(cpf.substring(9, 10))) return false;
+
+            soma = 0;
+            for (let i = 1; i <= 10; i++) {
+                soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+            }
+
+            resto = (soma * 10) % 11;
+
+            if ((resto == 10) || (resto == 11)) resto = 0;
+            if (resto != parseInt(cpf.substring(10, 11))) return false;
+
+            return true;
+        }
+
+        function validarEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        window.onclick = function (event) {
+            if (event.target == document.getElementById('forgotPasswordModal')) {
+                document.getElementById('forgotPasswordModal').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/noticias.css" type="text/css">
+    <title>Notícias de Saúde da Mulher</title>
+    
+</head>
+
+<body>
+    
+  <header class="cabecalho">
+    <a href="index.html">
+      <img class="logo-menu" src="img/logo2.png" alt="Logo">
+    </a>
+        <nav class="cabe-menu w-100 d-flex">
+            <a class="cabe-menu-item" href="servicos.html">Consultas</a>
+            <a class="cabe-menu-item" href="artigos.html">Artigos</a>
+            <a class="cabe-menu-item" href="mer.html">MER</a>
+        </nav>
+        <div class="dropdown">
+            <img src="img/female.png" alt="Foto perfil" width="45" height="auto" class="rounded-circle dropdown-toggle"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="servicos.html">Consultas</a>
+                <a class="dropdown-item" href="login.html">Login</a>
+                <a class="dropdown-item" href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+
+        <!-- Botões Lua e solzim -->
+
+        <button id="toggleDarkMode" class="dark-mode-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+        
+        <!-- Botões de acessibilidade -->
+    <div class="font-size-controls">
+        <button id="increaseFontSize">Aa+</button>
+        <button id="decreaseFontSize">Aa-</button>
+    </div>
+
+    </header>
+    
+    <main class="container mt-5 card">
+        <h1 class="text-center mt-4">Notícias sobre Saúde da Mulher</h1>
+        <p class="lead text-center">Fique por dentro das últimas novidades e informações relevantes para a saúde da mulher.</p>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/logo.png" class="card-img-top" alt="Notícia 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Avanços no Tratamento de Câncer de Mama</h5>
+                        <p class="card-text">Pesquisadores desenvolveram novas terapias que prometem aumentar a taxa de sobrevivência entre pacientes.</p>
+                        <a target="_blank" href="https://www.sponcologiaclinica.com.br/os-avancos-no-diagnostico-precoce-e-tratamento-do-cancer-de-mama-em-sao-paulo/" class="btn btn-primary">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/logo.png" class="card-img-top" alt="Notícia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Importância da Saúde Mental</h5>
+                        <p class="card-text">Estudos recentes mostram que a saúde mental das mulheres deve ser uma prioridade nas consultas médicas.</p>
+                        <a target="_blank" href="https://www.valesaude.com.br/saude-v/saude-mental-da-mulher-por-que-devemos-falar-mais-sobre-isso/" class="btn btn-primary">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/logo.png" class="card-img-top" alt="Notícia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Novos Exames Preventivos</h5>
+                        <p class="card-text">A introdução de novos exames pode ajudar na detecção precoce de doenças femininas.</p>
+                        <a target="_blank" href="https://bvsms.saude.gov.br/outubro-rosa-prevencao-e-diagnostico-precoce-do-cancer-de-mama/" class="btn btn-primary">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-5">Outras Notícias</h2>
+            <ul class="container">
+                <li><a target="_blank" href="https://capital.sp.gov.br/web/idosos/w/319407#:~:text=A%20recomenda%C3%A7%C3%A3o%20da%20OMS%20para,(aprendizado%20formal%20ou%20informal).">Dicas para um Envelhecimento Saudável</a>
+                <li><a target="_blank" href="https://capital.sp.gov.br/w/noticia/alimentacao-saudavel-ajuda-a-aliviar-sintomas-da-menopausa">Como a Alimentação Afeta a Menopausa</a></li>
+                <li><a target="_blank" href="https://capital.sp.gov.br/web/saude/w/atencao_basica/5696">Cuidado com a Saúde Sexual</a></li>
+                <li><a target="_blank" href="https://patriciasantafe.com.br/estresse-saude-mulher/">Impacto do Estresse na Saúde da Mulher</a></li>
+            </ul>
+    </main>
+
+    <footer class="rodape mt-5">
+        <div class="rodainfo">
+            <a href="index.html">
+                <p>&copy; 2024 Saúde da Mulher</p>
+            </a>
+            <nav class="nav-links">
+                <a href="sobre.html">Sobre</a>
+                <a href="polipriv.html">Política de Privacidade</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('toggleDarkMode');
+            const icon = toggleButton.querySelector('i');
+
+            // Verificar se o modo escuro está ativado
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                icon.classList.toggle('fa-moon');
+                icon.classList.toggle('fa-sun');
+
+                // Salvar a preferência do modo escuro
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                }
+            });
+
+            const increaseFontSizeBtn = document.getElementById('increaseFontSize');
+            const decreaseFontSizeBtn = document.getElementById('decreaseFontSize');
+            let currentFontSize = 16; // Tamanho de fonte padrão
+            const minFontSize = 12; // Tamanho de fonte mínimo
+            const maxFontSize = 24; // Tamanho de fonte máximo
+
+            // Função para alterar o tamanho da fonte
+            const changeFontSize = (delta) => {
+                currentFontSize += delta;
+                // Limitar o tamanho da fonte
+                currentFontSize = Math.max(minFontSize, Math.min(maxFontSize, currentFontSize));
+                document.body.style.fontSize = currentFontSize + 'px';
+            };
+
+            increaseFontSizeBtn.addEventListener('click', () => changeFontSize(2));
+            decreaseFontSizeBtn.addEventListener('click', () => changeFontSize(-2));
+        });
+    </script>
+
+</body>
+
+</html>

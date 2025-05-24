@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro-log.css" type="text/css">
+</head>
+
+<body>
+    <div class="btn-container">
+        <button class="btn-top" onclick="window.location.href='index-log.html'">Início</button>
+    </div>
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form id="registrationForm" onsubmit="return handleCadastro(event)">
+            <div class="form-row">
+                <div class="grupo-input">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required maxlength="25">
+                </div>
+                <div class="grupo-input">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Ex: 123.456.789-00" required maxlength="14" oninput="mascaraCPF(this)">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="grupo-input">
+                    <label for="motherName">Nome da Mãe:</label>
+                    <input type="text" id="motherName" name="motherName" required maxlength="25">
+                </div>
+                <div class="grupo-input">
+                    <label for="cellphone">Telefone Celular:</label>
+                    <input type="text" id="cellphone" name="cellphone" placeholder="Ex:(xx) xxxxx-xxxx" required maxlength="15" oninput="mascaraCelular(this)">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="grupo-input">
+                    <label for="birthdate">Data de Nascimento:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="maritalStatus">Estado Civil:</label>
+                    <select id="maritalStatus" name="maritalStatus">
+                        <option value="single">Solteira</option>
+                        <option value="married">Casada</option>
+                        <option value="divorced">Divorciada</option>
+                        <option value="widowed">Viúva</option>
+                        <option value="other">Outro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="grupo-input">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required maxlength="45" placeholder="seuemailaqui@email.com">
+                </div>
+                <div class="grupo-input">
+                    <label for="address">Endereço Completo:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="grupo-input">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required maxlength="8" oninput="validarSenha()">
+                </div>
+                <div class="grupo-input">
+                    <label for="confirmPassword">Confirmação de Senha:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required maxlength="8" oninput="validarSenha()">
+                    <span id="passwordError" style="color: red; display: none;">Senhas não coincidem!</span>
+                </div>
+            </div>
+            <div class="botao-container">
+                <button type="submit" class="botao">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function handleCadastro(event) {
+            event.preventDefault();
+            const cpf = document.getElementById('cpf').value;
+            const cellphone = document.getElementById('cellphone').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (!validarCPF(cpf)) {
+                alert('CPF inválido!');
+                return false;
+            }
+
+            if (!validarCelular(cellphone)) {
+                alert('Celular inválido!');
+                return false;
+            }
+
+            if (!validarEmail(email)) {
+                alert('E-mail inválido!');
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById('passwordError').style.display = 'inline';
+                return false;
+            }
+
+            alert('Usuário cadastrado!');
+            localStorage.setItem('userRegistered', true);
+            window.location.href = 'login.html';
+        }
+
+        function mascaraCPF(i) {
+            var v = i.value;
+
+            if (isNaN(v[v.length - 1])) { 
+                i.value = v.substring(0, v.length - 1);
+                return;
+            }
+
+            i.setAttribute("maxlength", "14");
+            if (v.length == 3 || v.length == 7) i.value += ".";
+            if (v.length == 11) i.value += "-";
+        }
+
+        function validarCPF(cpf) {
+            cpf = cpf.replace(/[^\d]+/g, '');
+
+            if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+                return false;
+            }
+
+            let soma = 0;
+            let resto;
+
+            for (let i = 1; i <= 9; i++) {
+                soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+            }
+
+            resto = (soma * 10) % 11;
+
+            if ((resto == 10) || (resto == 11)) resto = 0;
+            if (resto != parseInt(cpf.substring(9, 10))) return false;
+
+            soma = 0;
+            for (let i = 1; i <= 10; i++) {
+                soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+            }
+
+            resto = (soma * 10) % 11;
+
+            if ((resto == 10) || (resto == 11)) resto = 0;
+            if (resto != parseInt(cpf.substring(10, 11))) return false;
+
+            return true;
+        }
+
+        function mascaraCelular(i) {
+            var v = i.value;
+
+            if (isNaN(v[v.length - 1])) {
+                i.value = v.substring(0, v.length - 1);
+                return;
+            }
+
+            i.setAttribute("maxlength", "15");
+            if (v.length == 1) i.value = "(" + i.value;
+            if (v.length == 3) i.value += ") ";
+            if (v.length == 10) i.value += "-";
+        }
+
+        function validarCelular(celular) {
+            const celularRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
+            return celularRegex.test(celular);
+        }
+
+        function validarEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validarSenha() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const passwordError = document.getElementById('passwordError');
+
+            if (password === confirmPassword) {
+                passwordError.style.display = 'none';
+            } else {
+                passwordError.style.display = 'inline';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+/* Outros estilos fora das media queries */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  background-color: #eff0f0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+  font-family: "Rubik", sans-serif;
+}
+
+.cabecalho {
+  height: 60px;
+  background-color: #fd5198;
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo-menu {
+  width: 110px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.logo-menu:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.cabe-menu {
+  display: flex;
+  gap: 21px;
+  margin-right: 110px;
+}
+
+/* Edita a fonte dos Links */
+.cabe-menu-item {
+  font-family: "Rubik", sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+/* Edita animação de quando o mouse passa por cima dos Links */
+.cabe-menu-item:hover {
+  color: black;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  font-family: "Rubik", sans-serif;
+  color: black;
+  background-color: #fff;
+  border: 2px solid #fd5198;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.conte-principal1 h3 {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 40px;
+  margin: 70px 0;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 10%;
+  font-size: 34px;
+  color: #fd5198;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.clicavel-bloco {
+  background-color: white;
+  border: 2px solid #fd5198;
+  padding: 45px;
+  margin: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  font-family: "Rubik", sans-serif;
+}
+
+.bloco_clicavel .clicavel {
+  cursor: pointer;
+}
+
+.botao-flutu {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+}
+
+.botao-flutu a {
+  display: block;
+  width: 75px;
+  height: 75px;
+  background-image: url('img/zap.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.rodape {
+  background-color: #fd5198;
+  margin-top: 360px;
+  bottom: 0;
+  color: white;
+  padding: 10px 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.rodainfo {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.rodainfo p {
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 15px;
+}
+
+.rodainfo p:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.rodainfo a {
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-left: 25px;
+}
+
+.rodainfo a:hover {
+  color: black;
+}
+
+.texto-informativo {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 40px;
+  margin: 70px 0;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  font-family: "Rubik", sans-serif;
+}
+
+.texto-informativo h2,
+.texto-informativo h3 {
+  color: #fd5198;
+  margin-bottom: 15px;
+}
+
+.texto-informativo p,
+.texto-informativo li {
+  color: #212121;
+  margin-bottom: 15px;
+}
+
+.texto-informativo ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.texto-informativo ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+/* Media queries para dispositivos menores */
+@media only screen and (max-width: 767px) {
+
+  /* Ajustes para dispositivos menores */
+
+  /* Body padrão */
+  body {
+    width: auto; /* Largura automática */
+    padding: 10px; /* Espaçamento interno menor */
+  }
+
+  /* Cabeçalho */
+  .cabecalho {
+    height: auto; /* Altura automática */
+    padding: 10px; /* Espaçamento interno menor */
+    flex-direction: column; /* Altera para coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  /* Botão de alternância para modo escuro */
+  .dark-mode-btn {
+    align-self: center; /* Centraliza o botão */
+    margin-top: 10px; /* Adiciona margem superior */
+  }
+
+  /* Menu de Navegação */
+  .cabe-menu {
+    flex-direction: column; /* Altera para coluna */
+    gap: 10px; /* Espaçamento entre itens */
+    text-align: center; /* Centraliza texto */
+    margin-right: 0; /* Remove margem direita */
+  }
+
+  /* Logo do Menu */
+  .logo-menu {
+    margin: 10px; /* Margem uniforme */
+  }
+
+  /* Item do Menu */
+  .cabe-menu-item {
+    font-size: 16px; /* Tamanho de fonte menor */
+  }
+
+  /* Dropdown */
+  .dropdown {
+    margin-right: 0; /* Remove margem direita */
+  }
+
+  /* Conteúdo Principal */
+  .conte-principal1 h3 {
+    font-size: 24px; /* Tamanho de fonte menor */
+    margin-top: 5%; /* Margem superior menor */
+  }
+
+  /* Botão Flutuante */
+  .botao-flutu {
+    right: 20px; /* Posição ajustada */
+  }
+
+  /* Texto Informativo */
+  .texto-informativo {
+    padding: 15px;
+    margin: 40px 0;
+  }
+
+  .texto-informativo h2,
+  .texto-informativo h3,
+  .texto-informativo a {
+    font-size: 18px; /* Tamanho de fonte menor */
+  }
+
+  /* Rodapé */
+  .rodape {
+    margin-top: 80px; /* Margem superior maior */
+  }
+
+  /* Controles de Tamanho de Fonte */
+  .font-size-controls {
+    top: 15px; /* Posição ajustada */
+  }
+
+  .font-size-controls button {
+    font-size: 14px; /* Tamanho de fonte menor */
+  }
+}
+
+/* Media queries para tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  /* Ajustes para tablets */
+
+  /* Cabeçalho */
+  .cabecalho {
+    height: auto; /* Altura automática */
+    padding: 10px; /* Espaçamento interno menor */
+    flex-direction: column; /* Altera para coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  /* Botão de alternância para modo escuro */
+  .dark-mode-btn {
+    align-self: center; /* Centraliza o botão */
+    margin-top: 10px; /* Adiciona margem superior */
+  }
+
+  /* Menu de Navegação */
+  .cabe-menu {
+    flex-direction: column; /* Altera para coluna */
+    gap: 10px; /* Espaçamento entre itens */
+    text-align: center; /* Centraliza texto */
+    margin-right: 0; /* Remove margem direita */
+  }
+
+  /* Logo do Menu */
+  .logo-menu {
+    margin: 10px; /* Margem uniforme */
+  }
+
+  /* Item do Menu */
+  .cabe-menu-item {
+    font-size: 18px; /* Tamanho de fonte um pouco maior */
+  }
+
+  /* Dropdown */
+  .dropdown {
+    margin-right: 0; /* Remove margem direita */
+  }
+
+  /* Conteúdo Principal */
+  .conte-principal1 h3 {
+    font-size: 28px; /* Tamanho de fonte maior */
+    margin-top: 5%; /* Margem superior menor */
+  }
+
+  /* Botão Flutuante */
+  .botao-flutu {
+    right: 20px; /* Posição ajustada */
+  }
+
+  /* Texto Informativo */
+  .texto-informativo {
+    padding: 15px;
+    margin: 40px 0;
+  }
+
+  .texto-informativo h2,
+  .texto-informativo h3,
+  .texto-informativo a {
+    font-size: 20px; /* Tamanho de fonte maior */
+  }
+
+  /* Rodapé */
+  .rodape {
+    margin-top: 80px; /* Margem superior maior */
+  }
+
+  /* Controles de Tamanho de Fonte */
+  .font-size-controls {
+    top: 15px; /* Posição ajustada */
+  }
+
+  .font-size-controls button {
+    font-size: 16px; /* Tamanho de fonte um pouco maior */
+  }
+}

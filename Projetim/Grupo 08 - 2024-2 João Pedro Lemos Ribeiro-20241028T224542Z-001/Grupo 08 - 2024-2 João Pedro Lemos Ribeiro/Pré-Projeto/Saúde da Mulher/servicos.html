@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/servicos.css" type="text/css">
+    <title>Consultas para Saúde da Mulher</title>   
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="index.html">
+          <img class="logo-menu" src="img/logo2.png" alt="Logo">
+        </a>
+        <!-- Adicionando classes para centralizar o conteúdo do nav -->
+        <nav class="flex-container">
+            <a class="cabe-menu-item" href="artigos.html">Artigos</a>
+            <a class="cabe-menu-item" href="noticias.html">Notícias</a>
+            <a class="cabe-menu-item" href="mer.html">MER</a>
+        </nav>
+        <div class="dropdown">
+            <img src="img/female.png" alt="Foto perfil" width="45" height="auto" class="rounded-circle dropdown-toggle"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="login.html">Login</a>
+                <a class="dropdown-item" href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+        
+        <!-- Botões Lua e Sol -->
+        <button id="toggleDarkMode" class="dark-mode-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+    <!-- Botões de acessibilidade --> 
+    <div class="font-size-controls">
+        <button id="increaseFontSize">Aa+</button>
+        <button id="decreaseFontSize">Aa-</button>
+    </div>
+
+    <main class="container mt-5 card">
+        <h1 class="text-center mt-4">Consultas para Saúde da Mulher</h1>
+        <p class="fs-3 text-center">Agende sua consulta e cuide da sua saúde.</p>
+
+        <div class="row mt-4 w-auto">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/doctor-animate.svg" class="card-img-top" alt="Notícia 2">
+                    <div class="card-body mt-1">
+                        <h5 class="card-title">Consulta Ginecológica</h5>
+                        <p class="card-text">A consulta ginecológica é fundamental para o acompanhamento da saúde feminina. Realize exames de rotina e converse sobre suas preocupações.</p>
+                        <a href="login.html" class="btn btn-primary">Agendar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/nutricao-animate.svg" class="card-img-top" alt="Notícia 2">
+                    <div class="card-body mt-4">
+                        <h5 class="card-title">Consulta de Nutrição</h5>
+                        <p class="card-text">A nutrição adequada é essencial para a saúde da mulher. Agende uma consulta para receber orientações personalizadas sobre sua alimentação.</p>
+                        <a href="agendar.html" class="btn btn-primary">Agendar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/psychologist-animate.svg" class="card-img-top" alt="Notícia 3">
+                    <div class="card-body mt-4">
+                        <h5 class="card-title">Consulta Psicológica</h5>
+                        <p class="card-text">Cuidar da saúde mental é tão importante quanto a saúde física. Agende uma consulta com um psicólogo especializado.</p>
+                        <a href="agendar.html" class="btn btn-primary">Agendar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-4">Dicas para Preparação da Consulta</h2>
+        <ul class="container">
+            <li>Faça uma lista de perguntas ou preocupações que você deseja discutir.</li>
+            <li>Leve seus exames e resultados anteriores.</li>
+            <li>Informe-se sobre o que esperar durante a consulta.</li>
+            <li>Se possível, leve um acompanhante para apoio.</li>
+        </ul>
+    </main>
+
+    <!-- Botão do whatszap -->
+    <div class="botao-flutu">
+        <a href="https://web.whatsapp.com/send?phone=5521983773538">
+            <img src="img/zap.png" alt="WhatsApp" style="width: 75px; height: 75px;">
+        </a>
+    </div>
+
+    <footer class="rodape mt-5">
+        <div class="rodainfo">
+            <a href="index.html">
+                <p>&copy; 2024 Saúde da Mulher</p>
+            </a>
+            <nav class="nav-links">
+                <a href="sobre.html">Sobre</a>
+                <a href="polipriv.html">Política de Privacidade</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('toggleDarkMode');
+            const icon = toggleButton.querySelector('i');
+
+            // Verificar se o modo escuro está ativado
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                icon.classList.toggle('fa-moon');
+                icon.classList.toggle('fa-sun');
+
+                // Salvar a preferência do modo escuro
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                }
+            });
+
+            const increaseFontSizeBtn = document.getElementById('increaseFontSize');
+            const decreaseFontSizeBtn = document.getElementById('decreaseFontSize');
+            let currentFontSize = 16; // Tamanho de fonte padrão
+            const minFontSize = 12; // Tamanho de fonte mínimo
+            const maxFontSize = 24; // Tamanho de fonte máximo
+
+            // Função para alterar o tamanho da fonte
+            const changeFontSize = (delta) => {
+                currentFontSize += delta;
+                // Limitar o tamanho da fonte
+                currentFontSize = Math.max(minFontSize, Math.min(maxFontSize, currentFontSize));
+                document.body.style.fontSize = currentFontSize + 'px';
+            };
+
+            increaseFontSizeBtn.addEventListener('click', () => changeFontSize(2));
+            decreaseFontSizeBtn.addEventListener('click', () => changeFontSize(-2));
+        });
+    </script>
+</body>
+</html>

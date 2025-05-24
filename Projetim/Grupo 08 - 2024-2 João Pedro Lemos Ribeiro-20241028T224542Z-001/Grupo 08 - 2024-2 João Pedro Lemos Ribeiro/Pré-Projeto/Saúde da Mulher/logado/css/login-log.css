@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-image: url("../img-log/pinkbg-log.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Adicionado para garantir que o fundo se ajuste corretamente */
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+header {
+    width: 20px;
+    height: 10px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.btn-top {
+    z-index: 9999;
+    position: absolute;
+    top: 10px;
+    left: -100px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #EF2D8D;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    font-family: "Rubik", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: slideInFromLeft 1.0s forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        left: -100px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.btn-top:hover {
+    background-color: #EF2D8D;
+    color: white;
+}
+
+.main-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    margin-right: 30px;
+    width: 60vh;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    font-family: "Rubik", sans-serif;
+}
+
+.left-login>h1 {
+    color: white;
+    font-size: 3vw;
+}
+
+.left-login-image {
+    width: 35vw;
+    height: 15vw;
+}
+
+.right-login {
+    width: 50vh;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.card-login {
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    width: 65%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    color: #EF2D8D;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.btn-login {
+    font-family: "Rubik", sans-serif;
+    width: 100px;
+    margin: 25px;
+    padding: 14px 0px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 800;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+}
+
+.card-login>h1 {
+    color: white;
+    font-weight: 800;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    opacity: 0.9;
+}
+
+.textfield>input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background: white;
+    color: #EF2D8D;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    opacity: 0.9;
+}
+
+.textfield>label {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.textfield>input::placeholder {
+    color: #EF2D8D;
+    font-family: "Rubik", sans-serif;
+}
+
+.registro a {
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+.registro a:hover {
+    color: #EF2D8D;
+}
+
+.btn-login {
+    width: 100px;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #EF2D8D;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn-login:hover {
+    background-color: #EF2D8D;
+    color: white;
+    box-sizing: border-box;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    /* 5% from the top and centered */
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #EF2D8D;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    max-width: 400px;
+    /* Maximum width */
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-login-modal {
+    width: 100px;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #EF2D8D;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 15px;
+}
+
+.btn-login-modal:hover {
+    background-color: #EF2D8D;
+    color: white;
+    box-sizing: border-box;
+}
+
+.modal-content label {
+    color: black;
+    font-family: "Rubik", sans-serif;
+}
+
+/* Media queries para dispositivos menores */
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+
+    body {
+        background-size: cover;
+        /* Certifique-se de que a imagem de fundo cubra toda a tela */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login>h1 {
+        display: none;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 50vw;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+
+    body {
+        background-size: cover;
+        /* Certifique-se de que a imagem de fundo cubra toda a tela */
+    }
+}
+
+/* Media queries para tablets */
+@media only screen and (min-width: 601px) and (max-width: 950px) {
+    .left-login {
+        margin-right: 20px;
+        width: 50vh;
+        height: auto;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .left-login>h1 {
+        font-size: 2.5vw;
+    }
+
+    .left-login-image {
+        width: 30vw;
+        height: 12vw;
+    }
+
+    .right-login {
+        width: 40vh;
+        height: auto;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .card-login {
+        font-size: 14px;
+        width: 75%;
+        padding: 25px 30px;
+    }
+
+    .btn-login {
+        width: 90px;
+        padding: 12px 0px;
+        font-size: 14px;
+    }
+
+    .textfield {
+        margin: 8px 0px;
+    }
+
+    .textfield>label {
+        font-size: 14px;
+    }
+
+    .textfield>input {
+        font-size: 11pt;
+    }
+
+    .modal-content {
+        width: 85%;
+        max-width: 350px;
+    }
+
+    .btn-login-modal {
+        width: 90px;
+        padding: 14px 0px;
+        font-size: 14px;
+    }
+}

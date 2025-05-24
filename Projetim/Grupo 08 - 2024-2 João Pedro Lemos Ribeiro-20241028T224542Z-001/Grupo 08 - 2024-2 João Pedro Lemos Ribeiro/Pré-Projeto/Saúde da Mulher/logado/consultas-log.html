@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index2-log.css" type="text/css">
+  <link rel="shortcut icon" href="img-log/logo2.ico" type="image/x-icon">
+  <title>Consultas</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a href="index-log.html">
+      <img class="logo-menu" src="img-log/logo2.png" alt="Logo">
+    </a>
+    <nav class="cabe-menu">
+      <a class="cabe-menu-item" href="sobre.html">Sobre</a>
+      <a class="cabe-menu-item" href="servicos.html">Serviços</a>
+      <a class="cabe-menu-item" href="artigos.html">Artigos</a>
+      <a class="cabe-menu-item" href="noticias.html">Notícias</a>
+      <a class="cabe-menu-item" href="contato.html">Contato</a>
+    </nav>
+    </nav>
+    <div class="dropdown">
+      <img src="img-log/female-log.png" alt="Foto perfil" width="45" height="auto" class="rounded-circle dropdown-toggle"
+        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="exames.html">Exames</a>
+        <a class="dropdown-item" href="consultas.html">Consultas</a>
+        <a class="dropdown-item" href="alterarusu-log.html">Alterar usuário</a>
+        <a class="dropdown-item hidden" href="../index.html" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </header>
+  <main class="conteudo">
+    <section class="conte-principal1">
+      <h3>
+        Em breve...
+      </h3>
+    </section>
+  </main>
+  <div class="botao-flutu">
+    <a href="https://web.whatsapp.com/send?phone=5521983773538">
+      <img src="img-log/zap.png" alt="WhatsApp" style="width: 75px; height: 75px;">
+    </a>
+  </div>
+  <footer class="rodape">
+    <div class="rodainfo">
+      <a href="index.html">
+        <p>&copy; 2024 Saúde da Mulher</p>
+      </a>
+      <nav class="nav-links">
+        <a href="sobre.html">Sobre</a>
+        <a href="polipriv.html">Política de Privacidade</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      validarFormulario("consultas.html");
+    });
+
+    function validarFormulario(paginaDestino) {
+      const userLoggedIn = localStorage.getItem('userLoggedIn');
+
+      if (!userLoggedIn) {
+      }
+    }
+  </script>
+</body>
+
+</html>

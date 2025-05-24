@@ -1,0 +1,509 @@
+
+/*Fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+}
+
+/*Background*/
+body {
+  justify-content: center;
+  align-items: center;
+  background-color: #eff0f0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Navbar e Links no Modo Escuro */
+body.dark-mode nav a {
+  color: white;
+  transition: color 0.2s ease; 
+}
+
+/* Cabeçalho no Modo Escuro */
+body.dark-mode .cabecalho {
+  background-color: #333;
+}
+
+/* Botões de Modo Escuro */
+body.dark-mode .dark-mode-btn {
+  background-color: white;
+  color: black; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+body.dark-mode .dark-mode-btn:hover {
+  background-color: white;
+  color: black; 
+}
+
+/* Conteúdo Principal no Modo Escuro */
+body.dark-mode .text-center{
+  color:white;
+}
+
+body.dark-mode .card{
+  background-color:#333;
+}
+
+
+body.dark-mode .container{
+  background-color: #333;
+}
+
+/* Texto Informativo no Modo Escuro */
+body.dark-mode .texto-informativo {
+  background-color: #333;
+}
+
+body.dark-mode .texto-informativo h2,
+body.dark-mode .texto-informativo h3,
+body.dark-mode .texto-informativo a {
+  color: #fd5198;
+  transition: color 0.2s ease; 
+}
+
+body.dark-mode .texto-informativo p,
+body.dark-mode .texto-informativo li {
+  color: #ddd;
+}
+
+/* Dropdown no Modo Escuro */
+body.dark-mode .dropdown-menu {
+  background-color: #444;
+  color: white;
+  border-color: #fd5198; 
+}
+
+body.dark-mode .dropdown-menu a {
+  color: white; 
+}
+
+body.dark-mode .dropdown-menu a:hover {
+  background-color: #666; 
+}
+
+/* Rodapé no Modo Escuro */
+body.dark-mode .rodape {
+  background-color: #333; 
+  color: white; 
+}
+
+body.dark-mode .rodainfo p,
+body.dark-mode .rodainfo a,
+body.dark-mode .texto-informativo blockquote {
+  color: white; 
+  transition: color 0.2s ease; 
+}
+
+body.dark-mode .rodainfo p:hover,
+body.dark-mode .rodainfo a:hover {
+  color: #fd5198; 
+}
+
+/* Hover no Modo Escuro */
+body.dark-mode .cabecalho .cabe-menu-item:hover,
+body.dark-mode .cabecalho .dropdown:hover .dropdown-toggle,
+body.dark-mode .botao-flutu a:hover,
+body.dark-mode .rodainfo p:hover,
+body.dark-mode .rodainfo a:hover {
+  color: #fd5198; 
+  transition: color 0.2s ease; 
+}
+
+body.dark-mode .texto-informativo a:hover{
+  color: white;
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #444;
+  color: white;
+  border-color: #fd5198; 
+}
+
+body.dark-mode .dropdown-menu a {
+  color: white; 
+  transition: color 0.2s ease;
+}
+
+/* Botão de alternância para modo escuro */
+.dark-mode-btn {
+  background-color: white;
+  color: black; /* Cor do texto */
+  border: none;
+  margin-right: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover do botão no modo claro */
+.dark-mode-btn:hover {
+  background-color: #333; 
+  color: white; 
+}
+
+/* Ícone da Lua (modo escuro) */
+.fa-moon {
+  color: black; 
+}
+
+/* Hover do botão que afeta a Lua */
+.dark-mode-btn:hover .fa-moon {
+  color: white;
+  transition: color 0.3s; 
+}
+
+/* Ícone do Sol (modo claro) */
+.dark-mode .fa-sun {
+  color: black; 
+}
+
+/* Hover do botão que afeta o Sol */
+.dark-mode-btn:hover .fa-sun {
+  color: #fd5198; 
+  transition: color 0.3s; 
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+  font-family: "Rubik", sans-serif;
+}
+
+.cabecalho {
+  height: 60px;
+  background-color: #fd5198;
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+/*Lugar onde a logo fica*/
+.logo-menu {
+  width: 110px;
+  height: auto;
+  margin-left: 20px;
+}
+
+/*Ação ao passar o mouse*/
+.logo-menu:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.cabe-menu {
+  display: flex;
+  gap: 21px;
+  margin-right: 110px;
+}
+
+/* Edita a fonte dos Links */
+.cabe-menu-item {
+  font-family: "Rubik", sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.cabe-menu-item:hover {
+  color: black;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.flex-container{
+  display:flex;
+  gap: 21px;
+  margin-right: 15px;
+}
+
+
+/*Ínicio do Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  font-family: "Rubik", sans-serif;
+  color: black;
+  background-color: #fff;
+  border: 2px solid #fd5198;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.conte-principal1:hover {
+  color: #fd5198;
+  transform: scale(1.05);
+}
+
+/*Fim do Dropdown*/
+
+.card{
+  border-radius: 20px;
+}
+
+/*Edita os botões de serviços no Dark Mode*/
+body.dark-mode .clicavel-bloco{
+  background-color: #333;
+}
+
+body.dark-mode .clicavel-bloco h3 {
+  color: white;
+  margin: 0;
+  transition: color 0.3s, transform 0.3s;
+}
+
+body.dark-mode .clicavel-bloco:hover h3 {
+  color: #fd5198;
+  transform: scale(1.1);
+}
+
+/*Corpo dos blocos*/
+.clicavel-bloco {
+  background-color: white;
+  border: 2px solid #fd5198;
+  padding: 45px;
+  margin: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  font-family: "Rubik", sans-serif;
+  flex: 1 1 calc(33.333% - 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*Textos dos blocos*/
+.clicavel-bloco h3 {
+  color: black;
+  margin: 0;
+  transition: color 0.3s, transform 0.3s;
+}
+
+/*Ação ao passar o mouse*/
+.clicavel-bloco:hover h3 {
+  color: #fd5198;
+  transform: scale(1.1);
+}
+
+/*Botão zap zap*/
+.botao-flutu {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+}
+
+/*Link do zap*/
+.botao-flutu a {
+  display: block;
+  width: 75px;
+  height: 75px;
+  background-image: url('img/zap.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/*Corpo do rodape*/
+.rodape {
+  background-color: #fd5198;
+  margin-top: 110px;
+  bottom: 0;
+  color: white;
+  padding: 10px 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*Tamanho do rodape e local*/
+.rodainfo {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  transition: color 0.2s ease;
+}
+
+/*"p" do rodape*/
+.rodainfo p {
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 15px;
+  transition: color 0.2s ease;
+}
+
+/*Ação ao passar o mouse*/
+.rodainfo p:hover {
+  color: black;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/*Edita os links do rodainfo*/
+.rodainfo a {
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-left: 25px;
+  transition: color 0.2s ease;
+}
+
+/*Ação ao passar o mouse*/
+.rodainfo a:hover {
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Texto Informativo */
+/*  Edição do sobre  */
+
+/*  Edita o bloco onde está os textos  */
+.texto-informativo {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 40px;
+  margin: 70px 0;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+/*  Edita os títulos  */
+.texto-informativo h2,
+.texto-informativo h3 {
+  color: #212121;
+  margin-bottom: 20px;
+  font-family: "Rubik", sans-serif;
+}
+
+/*  Edita fonte, cor, linha e margem de "p" a "blockquote"  */
+.texto-informativo p,
+.texto-informativo ul,
+.texto-informativo ol,
+.texto-informativo blockquote {
+  color: #555;
+  line-height: 1.6;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 20px;
+}
+
+/*  Edita margem e preenchimento de "ul" e "ol" */
+.texto-informativo ul,
+.texto-informativo ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Edita margem de "li" */
+.texto-informativo li {
+  margin-bottom: 10px;
+}
+
+/*  Edita fonte, cor, borda e preenchimento de "blockquote"  */
+.texto-informativo blockquote {
+  border-left: 4px solid #fd5198;
+  padding-left: 10px;
+  color: #333;
+  font-style: italic;
+}
+
+/*  Edita o Slogan após junte-se a nós  */
+.texto-informativo p strong {
+  color: #fd5198;
+}
+
+.texto-informativo p:last-child {
+  font-size: 1.2em;
+  text-align: center;
+  color: #fd5198;
+  font-weight: bold;
+}
+
+/* Botões de controle de tamanho da fonte */
+.font-size-controls {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: "Rubik", sans-serif;
+}
+
+.font-size-controls button {
+  background-color: #fd5198;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.font-size-controls button:hover {
+  background-color: #333;
+  color: white;
+}
+
+/*Botões no Modo Dark*/
+body.dark-mode .font-size-controls button{
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .font-size-controls button:hover {
+  background-color: #333;
+  color: #fd5198;
+} 

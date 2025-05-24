@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/agendar_consulta.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Agendar Consulta - Saúde da Mulher</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="index.html">
+          <img class="logo-menu" src="img/logo2.png" alt="Logo">
+        </a>
+        <nav class="cabe-menu">
+            <a class="cabe-menu-item" href="sobre.html">Sobre</a>
+            <a class="cabe-menu-item" href="servicos.html">Consultas</a>
+            <a class="cabe-menu-item" href="artigos.html">Artigos</a>
+            <a class="cabe-menu-item" href="noticias.html">Notícias</a>
+            <a class="cabe-menu-item" href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <h1 class="text-center">Agendar Consulta Ginecológica</h1>
+        <p class="lead text-center">Preencha os campos abaixo para agendar sua consulta.</p>
+
+        <form id="agendarConsultaForm" action="enviar_agendamento.php" method="post">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" required pattern="\d{11}" title="Digite um CPF válido, sem pontos ou traços.">
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" class="form-control" id="telefone" name="telefone" required pattern="\d{10,11}" title="Digite um telefone válido com DDD.">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data">Data da Consulta</label>
+                <input type="date" class="form-control" id="data" name="data" required>
+            </div>
+
+            <div class="form-group">
+                <label for="horario">Horário da Consulta</label>
+                <select class="form-control" id="horario" name="horario" required>
+                    <option value="">Selecione um horário</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="observacoes">Observações</label>
+                <textarea class="form-control" id="observacoes" name="observacoes" rows="3" placeholder="Insira observações ou sintomas, se necessário"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Agendar Consulta</button>
+        </form>
+    </main>
+
+    <footer class="rodape py-4">
+        <div class="rodainfo">
+            <a href="index.html">
+                <p>&copy; 2024 Saúde da Mulher</p>
+            </a>
+            <nav class="nav-links">
+                <a href="sobre.html">Sobre</a>
+                <a href="polipriv.html">Política de Privacidade</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Validação para que o campo CPF aceite apenas números
+            $('#cpf').on('input', function () {
+                this.value = this.value.replace(/\D/g, ''); // Remove qualquer caractere que não seja número
+            });
+
+            // Validação para que o campo Telefone aceite apenas números
+            $('#telefone').on('input', function () {
+                this.value = this.value.replace(/\D/g, ''); // Remove qualquer caractere que não seja número
+            });
+        });
+    </script>
+</body>
+
+</html>

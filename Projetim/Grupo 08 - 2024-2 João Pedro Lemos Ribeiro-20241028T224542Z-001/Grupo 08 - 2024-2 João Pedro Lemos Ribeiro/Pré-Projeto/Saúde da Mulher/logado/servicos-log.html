@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/servicos-log.css" type="text/css">
+  <link rel="shortcut icon" href="img-log/logo2.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Serviços</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a href="index-log.html">
+      <img class="logo-menu" src="img-log/logo2.png" alt="Logo">
+    </a>
+    <nav class="cabe-menu">
+      <a class="cabe-menu-item" href="sobre-log.html">Sobre</a>
+      <a class="cabe-menu-item" href="artigos-log.html">Artigos</a>
+      <a class="cabe-menu-item" href="noticias-log.html">Notícias</a>
+      <a class="cabe-menu-item" href="contato-log.html">Contato</a>
+    </nav>
+    </nav>
+    <div class="dropdown">
+      <img src="img-log/female-log.png" alt="Foto perfil" width="45" height="auto" class="rounded-circle dropdown-toggle"
+        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="exames-log.html">Exames</a>
+        <a class="dropdown-item" href="consultas-log.html">Consultas</a>
+        <a class="dropdown-item" href="alterarusu-log.html">Alterar usuário</a>
+        <a class="dropdown-item hidden" href="../index.html" onclick="logout()">Logout</a>
+      </div>
+    </div>
+    <button id="toggleDarkMode" class="dark-mode-btn">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+  <!-- Botões de acessibilidade -->
+  <div class="font-size-controls">
+    <button id="increaseFontSize">Aa+</button>
+    <button id="decreaseFontSize">Aa-</button>
+  </div>  
+  <main class="conteudo">
+    <section class="conte-principal1">
+    </section>
+    <section class="conte-principal2">
+      <div class="clicavel-bloco">
+        <a href="exames-log.html">
+          <h3>Exames</h3>
+        </a>
+      </div>
+      <div class="clicavel-bloco">
+        <a href="consultas-log.html">
+          <h3>Consultas</h3>
+        </a>
+      </div>
+      <div class="clicavel-bloco">
+        <a href="calendmens-log.html">
+          <h3>Calendário Menstrual</h3>
+        </a>
+      </div>
+      <div class="clicavel-bloco">
+        <a href="metodoscont-log.html">
+          <h3>Métodos Contraceptivos</h3>
+        </a>
+      </div>
+      <div class="clicavel-bloco">
+        <a href="prenatal-log.html">
+          <h3>Pré-Natal</h3>
+        </a>
+      </div>
+      <div class="clicavel-bloco">
+        <a href="digmens-log.html">
+          <h3>Dignidade Menstrual</h3>
+        </a>
+      </div>
+    </section>
+  </main>
+  <div class="botao-flutu">
+    <a href="https://web.whatsapp.com/send?phone=5521983773538">
+      <img src="img-log/zap.png" alt="WhatsApp" style="width: 75px; height: 75px;">
+    </a>
+  </div>
+  <footer class="rodape">
+    <div class="rodainfo">
+      <a href="index-log.html">
+        <p>&copy; 2024 Saúde da Mulher</p>
+      </a>
+      <nav class="nav-links">
+        <a href="sobre-log.html">Sobre</a>
+        <a href="polipriv-log.html">Política de Privacidade</a>
+        <a href="contato-log.html">Contato</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+   const toggleButton = document.getElementById('toggleDarkMode');
+   const icon = toggleButton.querySelector('i');
+   
+   toggleButton.addEventListener('click', () => {
+     document.body.classList.toggle('dark-mode');
+     if (document.body.classList.contains('dark-mode')) {
+       icon.classList.remove('fa-moon');
+       icon.classList.add('fa-sun');
+     } else {
+       icon.classList.remove('fa-sun');
+       icon.classList.add('fa-moon');
+     }
+   });
+ });
+ document.addEventListener('DOMContentLoaded', (event) => {
+  const toggleButton = document.getElementById('toggleDarkMode');
+  const icon = toggleButton.querySelector('i');
+  const increaseFontSizeBtn = document.getElementById('increaseFontSize');
+  const decreaseFontSizeBtn = document.getElementById('decreaseFontSize');
+  let currentFontSize = 16; // Tamanho de fonte padrão
+
+  // Função para alterar o tamanho da fonte
+  const changeFontSize = (delta) => {
+    currentFontSize += delta;
+    document.body.style.fontSize = currentFontSize + 'px';
+  };
+
+  // Eventos de clique para os botões de aumentar e diminuir fonte
+  increaseFontSizeBtn.addEventListener('click', () => changeFontSize(2));
+  decreaseFontSizeBtn.addEventListener('click', () => changeFontSize(-2));
+});
+
+   </script>
+ </body>
+ 
+ </html>

@@ -1,0 +1,702 @@
+/*Fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Reseta algumas propriedades do site */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Body padrão */
+body {
+  justify-content: center;
+  align-items: center;
+  background-color: #eff0f0;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Navbar e Links no Modo Escuro */
+body.dark-mode nav a {
+  color: #fd5198;
+  transition: color 0.2s ease;
+}
+
+/* Cabeçalho no Modo Escuro */
+body.dark-mode .cabecalho {
+  background-color: #333;
+}
+
+/* Botões de Modo Escuro */
+body.dark-mode .dark-mode-btn {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .dark-mode-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Conteúdo Principal no Modo Escuro */
+body.dark-mode .conte-principal1 h3{
+  background-color: #333;
+}
+
+/* Texto Informativo no Modo Escuro */
+body.dark-mode .texto-informativo {
+  background-color: #333;
+}
+
+body.dark-mode .texto-informativo h2,
+body.dark-mode .texto-informativo h3,
+body.dark-mode .texto-informativo a {
+  color: #fd5198;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .texto-informativo p,
+body.dark-mode .texto-informativo li {
+  color: #ddd;
+}
+
+/* Dropdown no Modo Escuro */
+body.dark-mode .dropdown-menu {
+  background-color: #444;
+  color: white;
+  border-color: #fd5198;
+}
+
+body.dark-mode .dropdown-menu a {
+  color: white;
+  /* Cor dos links */
+}
+
+body.dark-mode .dropdown-menu a:hover {
+  background-color: #666;
+  /* Cor de fundo no hover */
+}
+
+/* Rodapé no Modo Escuro */
+body.dark-mode .rodape {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .rodainfo p,
+body.dark-mode .rodainfo a {
+  color: white;
+  transition: color 0.2s ease;
+}
+
+body.dark-mode .rodainfo p:hover,
+body.dark-mode .rodainfo a:hover {
+  color: #fd5198;
+  /* Cor do hover */
+}
+
+/* Hover no Modo Escuro */
+body.dark-mode .cabecalho .cabe-menu-item:hover,
+body.dark-mode .cabecalho .dropdown:hover .dropdown-toggle,
+body.dark-mode .botao-flutu a:hover,
+body.dark-mode .rodainfo p:hover,
+body.dark-mode .rodainfo a:hover {
+  color: #fd5198;
+  /* Cor do hover */
+  transition: color 0.2s ease;
+  /* Transição de cor */
+}
+
+body.dark-mode .texto-informativo a:hover {
+  color: white;
+}
+
+body.dark-mode a:hover{
+  color: white;
+}
+
+a:hover{
+  color:black;
+}
+
+/* Botão de alternância para modo escuro */
+.dark-mode-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  margin-right: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover do botão no modo claro */
+.dark-mode-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* Ícone da Lua (modo escuro) */
+.fa-moon {
+  color: black;
+}
+
+/* Hover do botão que afeta a Lua */
+.dark-mode-btn:hover .fa-moon {
+  color: white;
+  transition: color 0.3s;
+}
+
+/* Ícone do Sol (modo claro) */
+.dark-mode .fa-sun {
+  color: black;
+}
+
+/* Hover do botão que afeta o Sol */
+.dark-mode-btn:hover .fa-sun {
+  color: #fd5198;
+  transition: color 0.3s;
+}
+
+/*Fim do Modo escuro*/
+
+/* Elementos Padrão */
+
+/* Cabeçalho */
+.cabecalho {
+  height: 60px;
+  background-color: #fd5198;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container{
+  margin-bottom: -8px;
+}
+
+/* Menu de Navegação */
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+  font-family: "Rubik", sans-serif;
+  transition: color 0.2s ease;
+  /* Transição de cor */
+}
+
+/* Logo do Menu */
+.logo-menu {
+  width: 120px;
+  height: auto;
+  margin-top: 16px;
+  margin-left: 20px;
+}
+
+.logo-menu:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Menu Cabeçalho */
+.cabe-menu {
+  display: flex;
+  gap: 21px;
+  margin-right: 110px;
+}
+
+/* Item do Menu */
+.cabe-menu-item {
+  font-family: "Rubik", sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  transition: color 0.2s ease;
+  /* Transição de cor */
+}
+
+.cabe-menu-item:hover {
+  color: black;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  font-family: "Rubik", sans-serif;
+  color: black;
+  background-color: #fff;
+  border: 2px solid #fd5198;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  margin: 4px 0px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Conteúdo Principal */
+.conte-principal1 h3 {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 40px;
+  margin: 70px 0;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 10%;
+  font-size: 34px;
+  color: #fd5198;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Botão Flutuante */
+.botao-flutu {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+}
+
+.botao-flutu a {
+  display: block;
+  width: 75px;
+  height: 75px;
+  background-image: url('img/zap.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Texto Informativo */
+.texto-informativo {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 40px;
+  margin: 70px 0;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  font-family: "Rubik", sans-serif;
+}
+
+.texto-informativo h2,
+.texto-informativo h3,
+a {
+  transition: color 0.3s ease;
+  color: #fd5198;
+  margin-bottom: 15px;
+}
+
+.texto-informativo a:hover {
+  color: black;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.texto-informativo p,
+.texto-informativo li {
+  color: #212121;
+  margin-bottom: 15px;
+}
+
+.texto-informativo ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #fd5198;
+  margin-top: 120px;
+  bottom: 0;
+  color: white;
+  padding: 10px 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.rodainfo {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.rodainfo p {
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 15px;
+  transition: color 0.2s ease;
+}
+
+.rodainfo p:hover {
+  color: black;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.rodainfo a {
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-left: 25px;
+  transition: color 0.2s ease;
+}
+
+.rodainfo a:hover {
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Botões de controle de tamanho da fonte */
+.font-size-controls {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: "Rubik", sans-serif;
+}
+
+.font-size-controls button {
+  background-color: #fd5198;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.font-size-controls button:hover {
+  background-color: #333;
+  color: white;
+}
+
+/*Botões no Dark Mode*/
+body.dark-mode .font-size-controls button {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .font-size-controls button:hover {
+  background-color: #333;
+  color: #fd5198;
+}
+
+/* Media queries para dispositivos menores */
+@media only screen and (max-width: 767px) {
+
+  /* Ajustes para dispositivos menores */
+
+  /* Body padrão */
+  body {
+    width: auto;
+    /* Largura automática */
+    padding: 10px;
+    /* Espaçamento interno menor */
+  }
+
+  /* Cabeçalho */
+  .cabecalho {
+    height: auto;
+    /* Altura automática */
+    padding: 10px;
+    /* Espaçamento interno menor */
+    flex-direction: column;
+    /* Altera para coluna */
+    align-items: center;
+    /* Centraliza os itens */
+  }
+
+  /* Botão de alternância para modo escuro */
+  .dark-mode-btn {
+    align-self: center;
+    /* Centraliza o botão */
+    margin-top: 10px;
+    /* Adiciona margem superior */
+  }
+
+  /* Menu de Navegação */
+  .cabe-menu {
+    flex-direction: column;
+    /* Altera para coluna */
+    gap: 10px;
+    /* Espaçamento entre itens */
+    text-align: center;
+    /* Centraliza texto */
+    margin-right: 0;
+    /* Remove margem direita */
+  }
+
+  /* Logo do Menu */
+  .logo-menu {
+    margin: 10px;
+    /* Margem uniforme */
+  }
+
+  /* Item do Menu */
+  .cabe-menu-item {
+    font-size: 16px;
+    /* Tamanho de fonte menor */
+  }
+
+  /* Dropdown */
+  .dropdown {
+    margin-right: 0;
+    /* Remove margem direita */
+  }
+
+  /* Conteúdo Principal */
+  .conte-principal1 h3 {
+    font-size: 24px;
+    /* Tamanho de fonte menor */
+    margin-top: 5%;
+    /* Margem superior menor */
+  }
+
+  /* Botão Flutuante */
+  .botao-flutu {
+    right: 20px;
+    /* Posição ajustada */
+  }
+
+  /* Texto Informativo */
+  .texto-informativo {
+    padding: 15px;
+    margin: 40px 0;
+  }
+
+  .texto-informativo h2,
+  .texto-informativo h3,
+  .texto-informativo a {
+    font-size: 18px;
+    /* Tamanho de fonte menor */
+  }
+
+  /* Rodapé */
+  .rodape {
+    margin-top: 80px;
+    /* Margem superior maior */
+  }
+
+  /* Controles de Tamanho de Fonte */
+  .font-size-controls {
+    top: 15px;
+    /* Posição ajustada */
+  }
+
+  .font-size-controls button {
+    font-size: 14px;
+    /* Tamanho de fonte menor */
+  }
+}
+
+/* Media queries para tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  /* Ajustes para tablets */
+
+  /* Cabeçalho */
+  .cabecalho {
+    height: auto;
+    /* Altura automática */
+    padding: 10px;
+    /* Espaçamento interno menor */
+    flex-direction: column;
+    /* Altera para coluna */
+    align-items: center;
+    /* Centraliza os itens */
+  }
+
+  /* Botão de alternância para modo escuro */
+  .dark-mode-btn {
+    align-self: center;
+    /* Centraliza o botão */
+    margin-top: 10px;
+    /* Adiciona margem superior */
+  }
+
+  /* Menu de Navegação */
+  .cabe-menu {
+    flex-direction: column;
+    /* Altera para coluna */
+    gap: 10px;
+    /* Espaçamento entre itens */
+    text-align: center;
+    /* Centraliza texto */
+    margin-right: 0;
+    /* Remove margem direita */
+  }
+
+  /* Logo do Menu */
+  .logo-menu {
+    margin: 10px;
+    /* Margem uniforme */
+  }
+
+  /* Item do Menu */
+  .cabe-menu-item {
+    font-size: 18px;
+    /* Tamanho de fonte um pouco maior */
+  }
+
+  /* Dropdown */
+  .dropdown {
+    margin-right: 0;
+    /* Remove margem direita */
+  }
+
+  /* Conteúdo Principal */
+  .conte-principal1 h3 {
+    font-size: 28px;
+    /* Tamanho de fonte maior */
+    margin-top: 5%;
+    /* Margem superior menor */
+  }
+
+  /* Botão Flutuante */
+  .botao-flutu {
+    right: 20px;
+    /* Posição ajustada */
+  }
+
+  /* Texto Informativo */
+  .texto-informativo {
+    padding: 15px;
+    margin: 40px 0;
+  }
+
+  .texto-informativo h2,
+  .texto-informativo h3,
+  .texto-informativo a {
+    font-size: 20px;
+    /* Tamanho de fonte maior */
+  }
+
+  /* Rodapé */
+  .rodape {
+    margin-top: 80px;
+    /* Margem superior maior */
+  }
+
+  /* Controles de Tamanho de Fonte */
+  .font-size-controls {
+    top: 15px;
+    /* Posição ajustada */
+  }
+
+  .font-size-controls button {
+    font-size: 16px;
+    /* Tamanho de fonte um pouco maior */
+  }
+}
+
+.container{
+  border-radius: 25px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .container{
+  transition: color 0.1s ease;
+  background-color: #333;
+}
+
+body.dark-mode .card .btn{
+  transition: color 0.1s ease;
+  background-color: white;
+  border-color: white;
+  color: #333;
+}
+
+body.dark-mode .card .btn:hover{
+  background-color: #fd5198;
+  border-color: #fd5198;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.btn-primary {
+  background-color:#fd5198; 
+  border-color: #fd5198;     
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: black;
+  border-color: white;
+  transition: color 0.2s ease;
+}
+
+
+.btn-secondary:hover{
+  background-color: #fd5198;
+  border-color: #333;
+  transition: color 0.2s ease;
+}
+
+.modal-content{
+  border-radius: 19px;
+} 
+
+.dark-mode .modal-content {
+  border-radius: 19px;
+  background-color: #333; 
+  color: white;           
+}
+
+
+.dark-mode .modal-content input {
+  background-color: #444; 
+  color: white;           
+}
+
+.dark-mode .modal-content input::placeholder {
+  color: #ccc;
+}
